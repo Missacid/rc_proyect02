@@ -1,0 +1,78 @@
+:root {
+  --background: #252525;
+  --button: #1e1e1e;
+  /* --acento: #2de1fc; */
+  --acento: #b97fc9;
+
+  --bg-light: #2c2c2c;
+  --texto-claro: #aaaaaa;
+}
+* {
+  cursor: url(/assets/cursor/diamond-sword.cur), auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+::selection {
+  background-color: var(--acento);
+  color: var(--button);
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--button);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--acento);
+  border-radius: 50px;
+}
+
+/* Header */
+.header-universal {
+  position: sticky;
+  top: 0;
+}
+nav.navbar-universal {
+  background-color: #25252570 !important;
+  color: white;
+  backdrop-filter: blur(15px);
+}
+.boton-hamburguesa-header {
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.item-menu:hover,
+.item-menu:focus,
+.item-menu a:hover,
+.item-menu a:focus {
+  color: var(--acento) !important;
+  position: relative;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+.boton-iniciar-sesion-header {
+  background-color: transparent;
+  border: solid 1px white;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.boton-iniciar-sesion-header:hover {
+  color: var(--button);
+  background-color: var(--acento);
+  border: solid 1px var(--acento);
+  transition: background-color, border, 0.2s;
+}
+/* Footer */
+footer.footer-universal {
+  background-color: var(--button);
+  min-height: 20rem;
+}

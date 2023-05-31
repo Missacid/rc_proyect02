@@ -128,3 +128,71 @@
 .product-cover-art {
   max-width: 200px;
 }
+.product-price {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+/* Responsive mobile  */
+
+@media screen and (max-width: 425px) {
+  /* Primera seccion  */
+
+  .product-main-info {
+    width: 90%;
+  }
+  .game-title-product-page {
+    font-size: 3rem;
+  }
+  .game-category-product-page {
+    font-size: 1rem;
+  }
+  .game-info-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .info-game-container {
+    width: 100%;
+  }
+
+  /* Seccion de requisitos y boton compra */
+
+  .product-info-and-purchase {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .requeriments-product {
+    width: 100%;
+  }
+  .requeriment-title {
+    font-size: 3rem;
+  }
+  .purchase-column {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-left: none;
+    border-top: solid 1px var(--texto-claro);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .purchase-title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .sticky-container {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-self: flex-start;
+    align-items: center;
+    position: sticky;
+    top: 4rem;
+    gap: 1rem;
+  }
+  .product-cover-art {
+    max-width: 200px;
+  }
+}

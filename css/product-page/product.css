@@ -1,0 +1,130 @@
+/* Estilos para el sitio */
+.body-product-page {
+  background-color: var(--background);
+  min-height: 100vh;
+}
+/* Primer contenedor - Background image */
+
+.product-main-container {
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+}
+.product-main-background {
+  min-height: 80vh;
+  filter: blur(10px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.product-main-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: brightness(30%);
+  background: rgb(37, 37, 37);
+  background: linear-gradient(
+    0deg,
+    rgba(37, 37, 37, 1) 10%,
+    rgba(37, 37, 37, 0) 100%
+  );
+}
+
+/* Edicion informacion primer contenedor  */
+
+.product-main-info {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 80%;
+  flex-direction: column;
+  z-index: 2;
+}
+.game-title-product-page {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+.game-category-product-page {
+  color: var(--texto-claro);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.game-info-container {
+  display: flex;
+  gap: 1rem;
+  height: 40%;
+  margin-top: 1rem;
+}
+.info-game-container {
+  height: 100%;
+  width: 50%;
+}
+.game-description-container {
+  padding: 1rem;
+  padding-top: 0;
+}
+.game-description-container h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Bloque de requisitos y columna de compra */
+
+.product-info-and-purchase {
+  /* min-height: 30rem; */
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 0.5rem;
+
+  /* justify-content: center; */
+}
+
+.requeriments-product {
+  width: 75%;
+
+  padding: 2rem;
+  padding-top: 0;
+}
+.requeriment-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--texto-claro);
+  font-size: 4rem;
+}
+.purchase-column {
+  display: flex;
+  width: 25%;
+  justify-content: center;
+  border-left: 1px solid var(--texto-claro);
+}
+
+.purchase-title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.sticky-container {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-self: flex-start;
+  align-items: center;
+  position: sticky;
+  top: 4rem;
+  gap: 1rem;
+}
+.product-cover-art {
+  max-width: 200px;
+}

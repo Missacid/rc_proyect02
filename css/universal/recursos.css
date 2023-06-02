@@ -43,6 +43,9 @@ nav.navbar-universal {
   color: white;
   backdrop-filter: blur(15px);
 }
+a.nav-link {
+  font-family: "Roboto Mono", monospace;
+}
 .boton-hamburguesa-header {
   border: 0 !important;
   outline: none !important;

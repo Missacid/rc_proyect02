@@ -1,0 +1,115 @@
+.body-shop-page {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+/* Aside lateral de categorias  */
+
+.main-container-shop {
+  min-height: 100vh;
+  display: flex;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.shop-categories {
+  width: 20%;
+  padding: 0.5rem;
+}
+.categories-title {
+  color: var(--texto-claro);
+}
+.categories-list {
+  list-style: none;
+}
+.categories-list li a {
+  color: white;
+  text-decoration: none;
+}
+.categories-list li:hover,
+.categories-list li:focus,
+.categories-list li a:hover,
+.categories-list li a:focus {
+  transform: scale(1.2);
+  color: var(--acento);
+  transition: transform 0.2s;
+}
+
+/* Seccion de productos  */
+.title-and-search {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  align-items: center;
+}
+.input-buscar {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--texto-claro);
+  outline: none;
+}
+.input-buscar:focus {
+  border-bottom: solid 1px var(--acento);
+}
+.title-and-search h4 {
+  color: var(--texto-claro);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* Aqui empieza la fila de productos */
+.contenedor-juegos-tienda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+}
+.imagen-juego-tienda {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+.producto-tienda {
+  max-width: 12rem;
+  overflow: hidden;
+}
+.titulo-juego-tienda {
+  /* text-transform: uppercase; */
+  font-weight: bold;
+  margin: 0;
+  margin-top: 0.5rem;
+  display: block;
+  white-space: wrap;
+  /* font-size: 1.5rem; */
+}
+.titulo-seccion-juegos {
+  margin-top: 1rem;
+}
+.categoría-juego-tienda {
+  text-transform: uppercase;
+  color: var(--texto-claro);
+  font-size: 0.8rem;
+  margin: 2px;
+  font-weight: bold;
+}
+.hipervinculo-ver-mas-juego-tienda {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.8rem;
+  margin: 0;
+}
+button::before {
+  margin-left: auto;
+}
+.hipervinculo-ver-mas-juego-tienda::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--acento);
+  display: block;
+  transition: 0.3s;
+}
+
+.hipervinculo-ver-mas-juego-tienda:hover::after,
+.hipervinculo-ver-mas-juego-tienda:hover::before {
+  width: 30%;
+}

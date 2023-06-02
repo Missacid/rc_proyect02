@@ -20,6 +20,7 @@
 }
 .categories-list {
   list-style: none;
+  padding: 8%;
 }
 .categories-list li a {
   color: white;
@@ -35,6 +36,16 @@
 }
 
 /* Seccion de productos  */
+.form-search {
+  /* background-color: red; */
+  position: relative;
+}
+.search-icon {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  color: var(--texto-claro);
+}
 .title-and-search {
   display: flex;
   justify-content: space-between;
@@ -46,9 +57,14 @@
   border: none;
   border-bottom: 1px solid var(--texto-claro);
   outline: none;
+  padding: 0.5rem;
+  padding-left: 1.5rem;
 }
 .input-buscar:focus {
   border-bottom: solid 1px var(--acento);
+}
+.input-buscar:focus + i {
+  color: var(--acento);
 }
 .title-and-search h4 {
   color: var(--texto-claro);
@@ -61,6 +77,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.3rem;
+  padding: 1rem;
 }
 .imagen-juego-tienda {
   width: 200px;
@@ -112,4 +129,55 @@ button::before {
 .hipervinculo-ver-mas-juego-tienda:hover::after,
 .hipervinculo-ver-mas-juego-tienda:hover::before {
   width: 30%;
+}
+@media screen and (max-width: 1024px) {
+  /* .main-container-shop {
+    flex-direction: column;
+  }
+  .title-and-search {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .shop-categories {
+    order: 2;
+  } */
+  .seccion-tienda {
+    width: 100%;
+  }
+  .contenedor-juegos-tienda {
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .producto-tienda {
+    /* max-width: 48%; */
+    margin-bottom: 10px;
+    width: 9rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .main-container-shop {
+    flex-direction: column;
+  }
+  .title-and-search {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .shop-categories {
+    order: 2;
+  }
+  .seccion-tienda {
+    width: 95%;
+  }
+  .contenedor-juegos-tienda {
+    width: 100%;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .producto-tienda {
+    /* max-width: 48%; */
+    margin-bottom: 10px;
+    width: 100%;
+  }
 }

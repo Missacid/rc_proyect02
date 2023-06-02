@@ -1,8 +1,8 @@
 :root {
   --background: #252525;
   --button: #1e1e1e;
-  /* --acento: #2de1fc; */
-  --acento: #b97fc9;
+  --acento: #2de1fc;
+  /* --acento: #b97fc9; */
 
   --bg-light: #2c2c2c;
   --texto-claro: #aaaaaa;
@@ -12,6 +12,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  color: white;
 }
 
 ::selection {
@@ -35,6 +36,7 @@
 .header-universal {
   position: sticky;
   top: 0;
+  z-index: 99;
 }
 nav.navbar-universal {
   background-color: #25252570 !important;

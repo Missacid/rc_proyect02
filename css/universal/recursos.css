@@ -60,6 +60,9 @@ a.nav-link {
   transform: translateY(-2px);
   transition: transform 0.2s ease;
 }
+.a-link-login {
+  text-decoration: none;
+}
 .boton-iniciar-sesion-header {
   background-color: transparent;
   border: solid 1px white;
@@ -71,8 +74,7 @@ a.nav-link {
   gap: 0.5em;
 }
 .boton-iniciar-sesion-header:hover {
-  color: var(--button);
-  background-color: var(--acento);
+  background-color: var(--button);
   border: solid 1px var(--acento);
   transition: background-color, border, 0.2s;
 }

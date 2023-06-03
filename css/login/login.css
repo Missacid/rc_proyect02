@@ -6,7 +6,7 @@
 }
 
 ::selection {
-  background: #2de1fc;
+  background: var(--acento);
 }
 
 /* Estilos para el login*/
@@ -26,7 +26,7 @@
 }
 .wrapper .title {
   height: 90px;
-  background: #2de1fc;
+  background: var(--acento);
   border-radius: 5px 5px 0 0;
   font-size: 30px;
   font-weight: 600;
@@ -65,8 +65,8 @@ form .row input::placeholder {
   height: 100%;
   color: #fff;
   font-size: 18px;
-  background: #2de1fc;
-  border: 1px solid #2de1fc;
+  background: var(--acento);
+  border: 1px solid var(--acento);
   border-radius: 5px 0 0 5px;
   display: flex;
   align-items: center;
@@ -88,7 +88,7 @@ form .row input::placeholder {
   font-size: 20px;
   font-weight: 500;
   padding-left: 0px;
-  background: #2de1fc;
+  background: var(--acento);
   border: 1px solid #2c2c2c;
   cursor: pointer;
 }
@@ -102,7 +102,7 @@ form .button input:hover {
   color: #1e1e1e;
 }
 .wrapper form .signup-link a {
-  color: #2de1fc;
+  color: var(--acento);
   text-decoration: none;
 }
 form .signup-link a:hover {

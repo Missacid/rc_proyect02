@@ -75,18 +75,20 @@
       <div class="container col-md-12 col-lg-5">
         <div class="wrapper">
           <div class="title"><span>INICIAR SESIÓN</span></div>
-          <form action="#" name="login">
+          <form action="submit" name="login" 
+          class="form-login"
+          id="login-form">
             <div class="row">
               <i class="fas fa-user"></i>
-              <input type="email" id="correo" name="correo" placeholder="Correo Electrónico">
+              <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required>
             </div>
             <div class="row">
               <i class="fas fa-lock"></i>
-              <input type="password" id="contra" name="contra" placeholder="Contraseña">
+              <input type="password" id="contra" name="contra" placeholder="Contraseña" required>
             </div>
             <div class="pass"><a href="">Olvidé mi contraseña</a></div>
             <div class="row button">
-              <input type="button" value="Iniciar Sesion" onclick="">
+              <input type="submit" value="Iniciar Sesion" onclick="">
             </div>
             <div class="signup-link">¿No eres un miembro?. <a href="">Regístrate ahora.</a></div>
           </form>
@@ -110,5 +112,8 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Scripts creados para el proyecto  -->
+    <script src="/js/login-page/login.js"></script>
   </body>
 </html>

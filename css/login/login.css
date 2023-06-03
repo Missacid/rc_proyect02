@@ -10,6 +10,9 @@
 }
 
 /* Estilos para el login*/
+.main-login {
+  min-height: 100vh;
+}
 .container {
   max-width: 440px;
   padding: 0 20px;

@@ -1,7 +1,8 @@
 // Usuarios predefinidos del sitio:
 
-const usuariosLocalStorage =
-  JSON.parse(localStorage.getItem("usuariosRegistrados")) || [];
+const usuariosLocalStorage = JSON.parse(
+  localStorage.getItem("usuariosRegistrados")
+);
 console.log(usuariosLocalStorage);
 const usuariosRegistrados = [
   {
@@ -80,7 +81,7 @@ loginForm.addEventListener("submit", (evento) => {
     delete usuarioEncontrado.password;
     localStorage.setItem("usuarioActual", JSON.stringify(usuarioEncontrado));
     swal({
-      title: "Bienvenido",
+      title: "Iniciaste sesión",
       text: `Bienvenido ${usuarioEncontrado.nombre}`,
       icon: "success",
       button: "Continuar",
@@ -88,6 +89,6 @@ loginForm.addEventListener("submit", (evento) => {
     // ! Redirección al index.html
     setTimeout(() => {
       window.location.href = "/index.html"; // TODO Cambiar esto luego al panel del admin
-    }, 2000);
+    }, 1000);
   }
 });

@@ -43,6 +43,9 @@ nav.navbar-universal {
   color: white;
   backdrop-filter: blur(15px);
 }
+a.nav-link {
+  font-family: "Roboto Mono", monospace;
+}
 .boton-hamburguesa-header {
   border: 0 !important;
   outline: none !important;
@@ -57,6 +60,9 @@ nav.navbar-universal {
   transform: translateY(-2px);
   transition: transform 0.2s ease;
 }
+.a-link-login {
+  text-decoration: none;
+}
 .boton-iniciar-sesion-header {
   background-color: transparent;
   border: solid 1px white;
@@ -68,13 +74,52 @@ nav.navbar-universal {
   gap: 0.5em;
 }
 .boton-iniciar-sesion-header:hover {
-  color: var(--button);
-  background-color: var(--acento);
+  background-color: var(--button);
   border: solid 1px var(--acento);
   transition: background-color, border, 0.2s;
+}
+.separador-botones-header {
+  color: var(--acento);
+}
+.boton-cerrar-sesión {
+  color: rgb(255, 102, 102);
+}
+.boton-cerrar-sesión:hover {
+  color: rgb(255, 138, 138);
+}
+a.panel-administracion-link {
+  color: var(--acento) !important;
+  font-weight: bold;
 }
 /* Footer */
 footer.footer-universal {
   background-color: var(--button);
   min-height: 20rem;
+}
+
+/* PopUp Swal */
+
+.swal-modal {
+  background-color: var(--button);
+  color: white;
+}
+.swal-title,
+.swal-text {
+  color: white;
+}
+.swal-button--confirm {
+  background-color: var(--acento);
+  color: var(--button);
+}
+.swal-button--confirm:hover,
+.swal-button--confirm:focus {
+  background-color: var(--acento) !important;
+}
+.swal-icon,
+.swal-icon--success__hide-corners {
+  background-color: var(--button);
+}
+.swal-icon::before,
+.swal-icon::after {
+  background-color: var(--button);
 }

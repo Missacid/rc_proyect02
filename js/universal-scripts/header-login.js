@@ -1,6 +1,7 @@
 function validarSesion() {
-  const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioActual"));
-  console.log(usuarioLogueado);
+  const usuarioLogueado =
+    JSON.parse(localStorage.getItem("usuarioActual")) || false;
+
   const divLogin = document.getElementById("login-container");
 
   if (!usuarioLogueado) {

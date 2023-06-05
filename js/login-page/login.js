@@ -1,9 +1,4 @@
 // Usuarios predefinidos del sitio:
-
-const usuariosLocalStorage = JSON.parse(
-  localStorage.getItem("usuariosRegistrados")
-);
-console.log(usuariosLocalStorage);
 const usuariosRegistrados = [
   {
     nombre: "Máximo Majorel",
@@ -41,13 +36,20 @@ const usuariosRegistrados = [
     rol: "ADMIN_ROLE",
   },
 ];
+localStorage.setItem(
+  "usuariosRegistrados",
+  JSON.stringify(usuariosRegistrados)
+);
+const usuariosLocalStorage = JSON.parse(
+  localStorage.getItem("usuariosRegistrados")
+);
+
 if (!usuariosLocalStorage) {
   localStorage.setItem(
     "usuariosRegistrados",
     JSON.stringify(usuariosRegistrados)
   );
 }
-console.log(usuariosLocalStorage);
 
 // Elementos del DOM:
 const loginForm = document.getElementById("login-form");

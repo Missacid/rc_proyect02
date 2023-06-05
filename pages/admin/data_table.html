@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles_table.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script defer src="./initial.js"></script>
+    <script defer src="https://cdn.datatables.net/plug-ins/1.11.4/i18n/es_es.js"></script>
+
+
+
+
+    <title>Document</title>
+
+
+</head>
+<body>
+
+    <table id="example" class="table" style="width:100%">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Categoria</th>
+                <th>Plataforma</th>
+                <th>Stock</th>
+                <th>Año de lanzamiento</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Super Mario Bros</td>
+                <td>Categoria</td>
+                <td>NES</td>
+                <td>61</td>
+                <td>1985</td>
+                <td>$320,800</td>
+            </tr>
+            <tr>
+                <td>The Legend of Zelda: Ocarina of Time </td>
+                <td>Acción/Aventura</td>
+                <td>N64</td>
+                <td>63</td>
+                <td>1998</td>
+                <td>$170,750</td>
+            </tr>
+            <tr>
+                <td>Doom</td>
+                <td>Shooter en primera persona</td>
+                <td>PC</td>
+                <td>66</td>
+                <td>1993</td>
+                <td>$86,000</td>
+            </tr>
+            <tr>
+                <td>Pokémon Red/Blue</td>
+                <td>RPG</td>
+                <td>Game Boy</td>
+                <td>22</td>
+                <td>1996</td>
+                <td>$433,060</td>
+            </tr>
+            <tr>
+                <td>Super Metroid</td>
+                <td>Acción/Aventura</td>
+                <td>SNES</td>
+                <td>33</td>
+                <td>1994</td>
+                <td>$162,700</td>
+            </tr>
+            <tr>
+                <td>Tetris</td>
+                <td>Puzzle</td>
+                <td>Multiplataforma</td>
+                <td>61</td>
+                <td>1984</td>
+                <td>$372,000</td>
+            </tr>
+            <tr>
+                <td>Grand Theft Auto V</td>
+                <td>Acción/Aventura</td>
+                <td>Multiplataforma</td>
+                <td>59</td>
+                <td>2013</td>
+                <td>$137,500</td>
+            </tr>
+            <tr>
+                <td>Minecraft</td>
+                <td>Sandbox</td>
+                <td>Multiplataforma</td>
+                <td>55</td>
+                <td>2011</td>
+                <td>$327,900</td>
+            </tr>
+            <tr>
+                <td>The Last of Us</td>
+                <td>Acción/Aventura</td>
+                <td>PS/PC</td>
+                <td>39</td>
+                <td>2013</td>
+                <td>$205,500</td>
+            </tr>
+            <tr>
+                <td>Elden Ring</td>
+                <td>Aventura/ROL</td>
+                <td>Multiplataforma</td>
+                <td>23</td>
+                <td>2022</td>
+                <td>$103,600</td>
+            </tr>
+            <tr>
+                <td>Super Smash Bros Ultimate</td>
+                <td>Lucha</td>
+                <td>Nintendo Switch</td>
+                <td>30</td>
+                <td>2018</td>
+                <td>$90,560</td>
+            </tr>
+            <tr>
+                <td>Final Fantasy VII</td>
+                <td>RPG</td>
+                <td>Multiplataforma</td>
+                <td>22</td>
+                <td>1997</td>
+                <td>$342,000</td>
+            </tr>
+            <tr>
+                <td>Halo: Combat Evolved</td>
+                <td>Shooter en primera persona</td>
+                <td>Multiplataforma</td>
+                <td>36</td>
+                <td>2001</td>
+                <td>$470,600</td>
+            </tr>
+            <tr>
+                <td>The Elder Scrolls V: Skyrim</td>
+                <td>RPG</td>
+                <td>Multiplataforma</td>
+                <td>43</td>
+                <td>2011</td>
+                <td>$313,500</td>
+            </tr>
+            <tr>
+                <td>Metal Gear Solid </td>
+                <td>Acción/Aventura</td>
+                <td>Multiplataforma</td>
+                <td>19</td>
+                <td>1998</td>
+                <td>$385,750</td>
+            </tr>
+            <tr>
+                <td>Street Fighter II</td>
+                <td>Lucha</td>
+                <td>Multiplataforma</td>
+                <td>66</td>
+                <td>1991</td>
+                <td>$198,500</td>
+            </tr>
+            <tr>
+                <td>Sonic the Hedgehog</td>
+                <td>Plataforma</td>
+                <td>Sega Genesis</td>
+                <td>64</td>
+                <td>1991</td>
+                <td>$725,000</td>
+            </tr>
+            <tr>
+                <td>World of Warcraft</td>
+                <td>MMORPG</td>
+                <td>PC</td>
+                <td>59</td>
+                <td>2004</td>
+                <td>$237,500</td>
+            </tr>
+            <tr>
+                <td>Bioshock</td>
+                <td>Shooter en primera persona</td>
+                <td>Multiplataforma</td>
+                <td>41</td>
+                <td>2007</td>
+                <td>$132,000</td>
+            </tr>
+            <tr>
+                <td>Half-Life 2</td>
+                <td>Shooter en primera persona</td>
+                <td>PC</td>
+                <td>35</td>
+                <td>2004</td>
+                <td>$217,500</td>
+            </tr>
+            <tr>
+                <td>Resident Evil 4</td>
+                <td>Survival Horror</td>
+                <td>Multiplataforma</td>
+                <td>30</td>
+                <td>2005</td>
+                <td>$345,000</td>
+            </tr>
+            <tr>
+                <td>The Witcher 3: Wild Hunt</td>
+                <td>RPG</td>
+                <td>Multiplataforma</td>
+                <td>40</td>
+                <td>2015</td>
+                <td>$675,000</td>
+            </tr>
+            <tr>
+                <td>Uncharted 2: Among Thieves</td>
+                <td>Acción/Aventura</td>
+                <td>PS3/PS4</td>
+                <td>21</td>
+                <td>2009</td>
+                <td>$106,450</td>
+            </tr>
+            <tr>
+                <td>Overwatch</td>
+                <td>Shooter en primera persona</td>
+                <td>Multiplataforma</td>
+                <td>23</td>
+                <td>2016</td>
+                <td>$85,600</td>
+            </tr>
+            <tr>
+                <td>Fallout 3</td>
+                <td>RPG</td>
+                <td>Multiplataforma</td>
+                <td>47</td>
+                <td>2008</td>
+                <td>$1,200,000</td>
+            </tr>
+            <tr>
+                <td>God of War</td>
+                <td>Acción/Aventura</td>
+                <td>PS</td>
+                <td>42</td>
+                <td>2005</td>
+                <td>$92,575</td>
+            </tr>
+            <tr>
+                <td>Super Mario 64</td>
+                <td>Plataforma</td>
+                <td>N64</td>
+                <td>28</td>
+                <td>1996</td>
+                <td>$357,650</td>
+            </tr>
+            <tr>
+                <td>Call of Duty: Modern Warfare</td>
+                <td>Shooter en primera persona</td>
+                <td>Multiplataforma</td>
+                <td>28</td>
+                <td>2007</td>
+                <td>$206,850</td>
+            </tr>
+            <tr>
+                <td>Minecraft Dungeons</td>
+                <td>Acción/Aventura</td>
+                <td>Multiplataforma</td>
+                <td>48</td>
+                <td>2020</td>
+                <td>$850,000</td>
+            </tr>
+            <tr>
+                <td>Portal</td>
+                <td>Puzzle/Plataforma</td>
+                <td>Multiplataforma</td>
+                <td>20</td>
+                <td>2007</td>
+                <td>$163,000</td>
+            </tr>
+            <tr>
+                <td>Diablo II </td>
+                <td>RPG</td>
+                <td>PC</td>
+                <td>37</td>
+                <td>2000</td>
+                <td>$95,400</td>
+            </tr>
+            <tr>
+                <td>Mass Effect 2</td>
+                <td>RPG</td>
+                <td>Multiplataforma</td>
+                <td>53</td>
+                <td>2010</td>
+                <td>$114,500</td>
+            </tr>
+            <tr>
+                <td>Counter-Strike: Global Offensive</td>
+                <td>Shooter en primera persona</td>
+                <td>PC</td>
+                <td>27</td>
+                <td>2012</td>
+                <td>$145,000</td>
+            </tr>
+            <tr>
+                <td>Super Smash Bros Melee</td>
+                <td>Lucha</td>
+                <td>Multiplataforma</td>
+                <td>22</td>
+                <td>2001</td>
+                <td>$235,500</td>
+            </tr>
+            <tr>
+                <td>The Legend of Zelda: Breath of the Wild </td>
+                <td>Acción/Aventura</td>
+                <td>Nintendo Switch</td>
+                <td>46</td>
+                <td>2017</td>
+                <td>$324,050</td>
+            </tr>
+            <tr>
+                <td>Red Dead Redemption 2</td>
+                <td>Acción/Aventura</td>
+                <td>Multiplataforma</td>
+                <td>47</td>
+                <td>2018</td>
+                <td>$85,675</td>
+            </tr>
+            <tr>
+                <td>Gears of War</td>
+                <td>Shooter en tercera persona</td>
+                <td>Xbox 360</td>
+                <td>51</td>
+                <td>2006</td>
+                <td>$164,500</td>
+            </tr>
+            <tr>
+                <td>Dark Souls</td>
+                <td>Acción/RPG</td>
+                <td>Multiplataforma</td>
+                <td>41</td>
+                <td>2011</td>
+                <td>$109,850</td>
+            </tr>
+            <tr>
+                <td>FIFA 21</td>
+                <td>Deportes</td>
+                <td>Multiplataforma</td>
+                <td>62</td>
+                <td>2020</td>
+                <td>$452,500</td>
+            </tr>
+            <tr>
+                <td>Tetris Effect</td>
+                <td>Puzzle</td>
+                <td>PS4</td>
+                <td>37</td>
+                <td>2018</td>
+                <td>$136,200</td>
+            </tr>
+            <tr>
+                <td>Pac-Man</td>
+                <td>Arcade</td>
+                <td>Multiplataforma</td>
+                <td>65</td>
+                <td>1980</td>
+                <td>$645,750</td>
+            </tr>
+            <tr>
+                <td>Assassin's Creed Odyssey</td>
+                <td>Acción/Aventura</td>
+                <td>Multiplataforma</td>
+                <td>64</td>
+                <td>2018</td>
+                <td>$234,500</td>
+            </tr>
+            <tr>
+                <td>Celeste </td>
+                <td>Plataforma</td>
+                <td>Multiplataforma</td>
+                <td>38</td>
+                <td>2018</td>
+                <td>$163,500</td>
+            </tr>
+            <tr>
+                <td>Minecraft: Story Mode</td>
+                <td>Aventura gráfica</td>
+                <td>Multiplataforma</td>
+                <td>37</td>
+                <td>2015</td>
+                <td>$139,575</td>
+            </tr>
+            <tr>
+                <td>League of Legends </td>
+                <td>MOBA</td>
+                <td>PC</td>
+                <td>61</td>
+                <td>2009</td>
+                <td>$98,540</td>
+            </tr>
+            <tr>
+                <td>Splatoon 2</td>
+                <td>Shooter en tercera persona</td>
+                <td>Nintendo Switch</td>
+                <td>47</td>
+                <td>2017</td>
+                <td>$87,500</td>
+            </tr>
+            <tr>
+                <td>Super Mario Odyssey</td>
+                <td>Plataforma</td>
+                <td>Nintendo Switch</td>
+                <td>64</td>
+                <td>2017</td>
+                <td>$138,575</td>
+            </tr>
+            <tr>
+                <td>Grand Theft Auto: San Andreas</td>
+                <td>Acción/Aventura</td>
+                <td>Multiplataforma</td>
+                <td>63</td>
+                <td> 2004</td>
+                <td>$125,250</td>
+            </tr>
+            <tr>
+                <td>The Sims 4</td>
+                <td>Simulación</td>
+                <td>Multiplataforma</td>
+                <td>56</td>
+                <td>2014</td>
+                <td>$115,000</td>
+            </tr>
+            <tr>
+                <td>StarCraft II</td>
+                <td>Estrategia en tiempo real</td>
+                <td>PC</td>
+                <td>43</td>
+                <td>2010</td>
+                <td>$75,650</td>
+            </tr>
+            <tr>
+                <td>Minecraft: Education Edition</td>
+                <td>Educación</td>
+                <td>Multiplataforma</td>
+                <td>46</td>
+                <td>2016</td>
+                <td>$145,600</td>
+            </tr>
+            <tr>
+                <td>Cyberpunk 2077</td>
+                <td>Acción/Aventura/ROL</td>
+                <td>Multiplataforma</td>
+                <td>47</td>
+                <td>2020</td>
+                <td>$123,45</td>
+            </tr>
+            <tr>
+                <td>Hogwarts Legacy</td>
+                <td>MMORPG</td>
+                <td>Multiplataforma</td>
+                <td>21</td>
+                <td>2023</td>
+                <td>$103,500</td>
+            </tr>
+            <tr>
+                <td>Diablo IV</td>
+                <td>Acción/Aventura</td>
+                <td>Multiplataforma</td>
+                <td>30</td>
+                <td>2023</td>
+                <td>$86,500</td>
+            </tr>
+            <tr>
+                <td>Atomic Heart</td>
+                <td>Shooter en primera persona</td>
+                <td>Multiplataforma</td>
+                <td>51</td>
+                <td>2023</td>
+                <td>$183,000</td>
+            </tr>
+            <tr>
+                <td>Assassin's Creed Mirage</td>
+                <td>Acción/Aventura/Sigilo</td>
+                <td>Multiplataforma</td>
+                <td>29</td>
+                <td>2023</td>
+                <td>$183,000</td>
+            </tr>
+            <tr>
+                <td>Mortal Kombat 11</td>
+                <td>Lucha</td>
+                <td>Multiplataforma</td>
+                <td>27</td>
+                <td>2019</td>
+                <td>$112,000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Nombre</th>
+                <th>Categoria</th>
+                <th>Plataforma</th>
+                <th>Stock</th>
+                <th>Año de lanzamiento</th>
+                <th>Precio</th>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>

@@ -43,6 +43,10 @@ nav.navbar-universal {
   color: white;
   backdrop-filter: blur(15px);
 }
+.header-logo {
+  width: 50px;
+}
+
 a.nav-link {
   font-family: "Roboto Mono", monospace;
 }
@@ -99,9 +103,11 @@ footer.footer-universal {
   gap: 1rem;
 }
 .columna-footer {
-  /* background-color: red; */
   width: 33%;
   margin: 1rem;
+}
+.logo-footer {
+  width: 70%;
 }
 .columna-1-footer {
   display: flex;
@@ -126,6 +132,24 @@ footer.footer-universal {
 .list-item-social:hover,
 .list-item-social:focus {
   color: var(--acento);
+}
+@media screen and (max-width: 425px) {
+  .footer-universal {
+    flex-direction: column;
+    gap: 0;
+    overflow-x: hidden;
+  }
+  .columna-footer {
+    width: 100%;
+    max-width: 100%;
+  }
+  .columna-1-footer {
+    order: 3;
+  }
+  .logo-footer {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
 }
 /* PopUp Swal */
 

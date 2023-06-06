@@ -9,7 +9,8 @@ console.log(producto);
 
 function dibujarPagina() {
   const infoPrincipal = document.getElementById("product-main-info");
-
+  const documentTitle = document.getElementById("document-title");
+  documentTitle.innerHTML = `${producto.titulo} - Gastly Games`;
   infoPrincipal.innerHTML = `
         
     <div class="product-main-info" >
@@ -60,7 +61,7 @@ function dibujarPagina() {
   `;
   const precioJuego = document.getElementById("precio-juego");
   if (producto.precio === 0) {
-    precioJuego.innerHTML = " Gratis";
+    precioJuego.innerHTML = "Juego Gratuito";
   } else {
     precioJuego.innerHTML = `$${producto.precio}`;
   }

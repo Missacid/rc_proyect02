@@ -1,6 +1,6 @@
 const products = [
   {
-    titulo: "Zelda Breath of The Wild",
+    titulo: "Zelda: Breath of The Wild",
     categoria: "Aventura",
     descripcion: "La aventura de Zelda Breath of The Wild",
     requisitos: "XD",

@@ -24,49 +24,49 @@
     <title>Página de producto</title>
   </head>
   <body class="body-product-page">
-        <!-- Header -->
-        <header class="header-universal">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-universal navbar-dark">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="/index.html">Logo</a>
-                <button
-                  class="navbar-toggler boton-hamburguesa-header"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item item-menu">
-                      <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item item-menu">
-                      <a class="nav-link active" aria-current="page" href="/pages/shop/shop.html">Tienda</a>
-                    </li>
-                    <li class="nav-item item-menu">
-                      <a class="nav-link active" aria-current="page" href="#">Sobre nosotros</a>
-                    </li>
-                    <li class="nav-item item-menu">
-                      <a class="nav-link active" aria-current="page" href="#">Contacto</a>
-                    </li>
-                      </ul>
-                    </li>
-        
-                  </ul>
-                  <div>
-                    <button class="boton-iniciar-sesion-header"><i class="fa-solid fa-user"></i> Iniciar Sesion</button>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </header>
-            <!-- Fin del Header -->
-    <section class="product-main-container">     
+    <!-- Header -->
+    <header class="header-universal">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-universal navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html">Logo</a>
+          <button
+            class="navbar-toggler boton-hamburguesa-header"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="menu-header" class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item item-menu">
+                <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
+              </li>
+              <li class="nav-item item-menu">
+                <a class="nav-link active" aria-current="page" href="/pages/shop/shop.html">Tienda</a>
+              </li>
+              <li class="nav-item item-menu">
+                <a class="nav-link active" aria-current="page" href="#">Sobre nosotros</a>
+              </li>
+              <li class="nav-item item-menu">
+                <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+              </li>
+                </ul>
+              </li>
+  
+            </ul>
+            <div id="login-container">
+  
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+      <!-- Fin del Header -->
+    <section id="product-main-info" class="product-main-container">     
     <div class="product-main-info" >
       <section class="title-container">
         <h2 class="game-title-product-page">Cyberpunk 2077</h2>
@@ -89,7 +89,7 @@
       
     </div>
   </section>
-  <section class="product-info-and-purchase">
+  <section id="requisitos-y-compra" class="product-info-and-purchase">
     <div class="product-requeriments-column requeriments-product">
       <h3 class="requeriment-title">Requisitos </h3>
       <hr>
@@ -117,9 +117,12 @@
       <img  class="product-cover-art" src="https://s01.riotpixels.net/data/c8/97/c897801b-8a44-4318-8ab3-7633f0ae75a0.jpg/cover.cyberpunk-2077.1440x2160.2019-08-20.154.jpg" alt="" >
       <h3 class="product-price">$123,45</h3>
       <div class="button-container">
-        
+        <a href="/pages/404/404.html">
         <button class="btn btn-danger">Comprar ahora</button>
+      </a>
+      <a href="/pages/404/404.html">
         <button class="btn btn-secondary">Agregar al carrito</button>
+      </a>
       </div>
     </div>
 
@@ -140,6 +143,7 @@
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"
           ></script>
-          
+          <script src="/js/universal-scripts/header-login.js"></script>
+          <script src="/js/product-page/dibujar-producto.js"></script>
   </body>
 </html>

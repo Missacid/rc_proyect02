@@ -1,6 +1,26 @@
-#example {
-    background-color: #2c2c2c;
-    color: #FFFF;
+.body-admin-panel {
+  background-color: var(--background);
 }
-
-
+.admin-title {
+  color: var(--texto-claro);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.contenedor-info {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+.boton-agregar-producto {
+  background-color: var(--button) !important;
+  color: white !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  border: solid 1px white !important;
+}
+.botones-tabla {
+  margin-right: 0.5rem;
+}
+.form-select option {
+  color: var(--button) !important;
+}

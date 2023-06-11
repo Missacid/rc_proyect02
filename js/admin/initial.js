@@ -2,7 +2,7 @@ let datatable;
 let storedData = localStorage.getItem("products");
 let products = [];
 let editIndex;
-
+const botonSubmit = document.getElementById("boton-submit");
 if (storedData) {
   products = JSON.parse(storedData);
 }
@@ -120,9 +120,9 @@ $(document).ready(function () {
     document.getElementById("precio").value = producto.precio;
     document.getElementById("banner").value = producto.banner;
     document.getElementById("portada").value = producto.portada;
+    botonSubmit.innerHTML = "Actualizar producto";
   });
 });
-
 function imprimirDatos() {
   if (editIndex !== undefined) {
     products[editIndex].nombre = document.getElementById("nombre").value;
@@ -145,6 +145,7 @@ function imprimirDatos() {
 
     // Reiniciar el índice de edición
     editIndex = undefined;
+    botonSubmit.innerHTML = "Subir producto";
   } else {
     let x = {
       codigo: Date.now(), // Generar un código único para el elemento
@@ -167,3 +168,9 @@ function imprimirDatos() {
     localStorage.setItem("products", JSON.stringify(products));
   }
 }
+const formulario = document.getElementById("formulario");
+formulario.addEventListener("submit", (e) => {
+  e.preventDefault();
+  imprimirDatos();
+  formulario.reset();
+});

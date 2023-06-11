@@ -1,98 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles_table.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/admin/styles_table.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css"
+    />
     <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script defer src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script defer src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-    <script defer src="./initial.js"></script>
-
+    <script
+      defer
+      src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"
+    ></script>
+    <script defer src="/js/admin/initial.js"></script>
+    <link rel="stylesheet" href="/css/universal/recursos.css" />
     <title>Document</title>
-
-</head>
-<body>
-    <h1>ALTA Y BAJA DE INVENTARIO</h1>
-    <hr>
-
-    <div id="formGames" style="width:100%">
-
-        <form class="row g-3">
-            <div class="col-md-3">
-                <label for="validationDefault05" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" required>
-            </div>
-            <div class="col-md-3">
-                <label for="validationDefault05" class="form-label">Categoria</label>
-                <input type="text" class="form-control" id="categoria" required>
-            </div>
-            <hr>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> Descripcion</span>
+  </head>
+  <body class="body-admin">
+        <!-- Header -->
+        <header class="header-universal">
+          <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-universal navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/index.html"><img  class="header-logo" src="/assets/images/logo/isotipo.png" alt="Logo Gastly Games"></a>
+              <button
+                class="navbar-toggler boton-hamburguesa-header"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul id="menu-header" class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item item-menu">
+                    <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item item-menu">
+                    <a class="nav-link active" aria-current="page" href="/pages/shop/shop.html">Tienda</a>
+                  </li>
+                  <li class="nav-item item-menu">
+                    <a class="nav-link active" aria-current="page" href="#">Sobre nosotros</a>
+                  </li>
+                  <li class="nav-item item-menu">
+                    <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+                  </li>
+                    </ul>
+                  </li>
+      
+                </ul>
+                <div id="login-container">
+      
                 </div>
-                <input type="text" class="form-control" id="descripcion" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+              </div>
             </div>
-            <div class="col-md-3">
-                <label for="validationDefault05" class="form-label">Link de video 
-                  </label>
-                <input type="text" class="form-control" id="link_de_video" required>
-            </div>
-            <div class="col-md-3">
-                <label for="validationDefault05" class="form-label">Requisitos</label>
-                <input type="text" class="form-control" id="requisitos" required>
-            </div>
-            <div class="col-md-3">
-                <label for="validationDefault05" class="form-label">Precio</label>
-                <input type="text" class="form-control" id="precio" required>
-            </div>
-            <hr>
-            <div class="col-md-3">
-                <label for="validationDefault05" class="form-label">Banner</label>
-                <input type="file" class="form-control" id="banner">
-            </div>
-            <div class="col-md-3">
-                <label for="validationDefault05" class="form-label">Portada</label>
-                <input type="file" class="form-control" id="portada">
-            </div>
-            <hr>
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-                    <label class="form-check-label" for="invalidCheck2">
-                        Aseguro querer subir datos
-                    </label>
-                </div>
-            </div>
-            <div class="col-12">
-                <a class="btn btn-primary" onclick="imprimirDatos()">Submit form</a>
-            </div>
-        </form>
+          </nav>
+        </header>
+          <!-- Fin del Header -->
+    <h1>Administrar productos</h1>
+    <hr />
+
+    <div id="formGames" style="width: 100%">
+      <form class="row g-3">
+        <div class="col-md-3">
+          <label for="validationDefault05" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required />
+        </div>
+        <div class="col-md-3">
+          <label for="validationDefault05" class="form-label">Categoria</label>
+          <input type="text" class="form-control" id="categoria" required />
+        </div>
+        <hr />
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> Descripcion</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            id="descripcion"
+            aria-label="Default"
+            aria-describedby="inputGroup-sizing-default"
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="validationDefault05" class="form-label"
+            >ID de Trailer (YouTube)
+          </label>
+          <input type="text" class="form-control" id="link_de_video" required />
+        </div>
+        <div class="col-md-3">
+          <label for="validationDefault05" class="form-label">Requisitos</label>
+          <input type="text" class="form-control" id="requisitos" required />
+        </div>
+        <div class="col-md-3">
+          <label for="validationDefault05" class="form-label">Precio</label>
+          <input type="number" class="form-control" id="precio" required min="0"/>
+        </div>
+        <hr />
+        <div class="col-md-3">
+          <label for="validationDefault05" class="form-label">Imagen tipo Banner</label>
+          <input type="url" class="form-control" id="banner" />
+        </div>
+        <div class="col-md-3">
+          <label for="validationDefault05" class="form-label">Portada</label>
+          <input type="url" class="form-control" id="portada" />
+        </div>
+        <hr />
+        <div class="col-12">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="invalidCheck2"
+              required
+            />
+            <label class="form-check-label" for="invalidCheck2">
+              Aseguro querer subir datos
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" onclick="imprimirDatos()"> Subir producto</button>
+        </div>
+      </form>
     </div>
 
-    <hr>
-    <hr>
+    <hr />
+    <hr />
 
-    <h1> INVENTARIO </h1>
-    <hr>
+    <h1>INVENTARIO</h1>
+    <hr />
 
-    <table id="example" class="table" style="width:100%">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Categoria</th>
-                <th>Descripcion</th>
-                <th>Link de video</th>
-                <th>Requisitos</th>
-                <th>Precio</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
+    <table id="example" class="table" style="width: 100%">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Categoria</th>
+          <th>Descripcion</th>
+          <th>Link de video</th>
+          <th>Requisitos</th>
+          <th>Precio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
     </table>
-
+    <script src="/js/universal-scripts/header-login.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>
-  </html>
+</html>

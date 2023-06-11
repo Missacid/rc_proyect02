@@ -6,13 +6,13 @@ function mostrarProductos() {
     contenedorJuegos.innerHTML += `
     <div class="producto-inicio">
     <img
-      src="${producto.cover}"
-      alt="${producto.titulo}"
+      src="${producto.portada}"
+      alt="${producto.nombre}"
       class="imagen-juego-inicio"
     />
-    <h5 class="titulo-juego-inicio">${producto.titulo}</h5>
+    <h5 class="titulo-juego-inicio">${producto.nombre}</h5>
     <h6 class="categoría-juego-inicio">${producto.categoria}</h6>
-    <a class="hipervinculo-ver-mas-juego-inicio" href="/pages/product-page/plantilla/plantilla.html?id=${producto.id}">Ver Más</a>
+    <a class="hipervinculo-ver-mas-juego-inicio" href="/pages/product-page/plantilla/plantilla.html?id=${producto.codigo}">Ver Más</a>
   </div>
         `;
   });

@@ -4,23 +4,23 @@ console.log(id);
 const productosLocal = JSON.parse(localStorage.getItem("products"));
 console.log(productosLocal);
 
-const producto = productosLocal.find((producto) => producto.id == id);
+const producto = productosLocal.find((producto) => producto.codigo == id);
 console.log(producto);
 
 function dibujarPagina() {
   const infoPrincipal = document.getElementById("product-main-info");
   const documentTitle = document.getElementById("document-title");
-  documentTitle.innerHTML = `${producto.titulo} - Gastly Games`;
+  documentTitle.innerHTML = `${producto.nombre} - Gastly Games`;
   infoPrincipal.innerHTML = `
         
     <div class="product-main-info" >
       <section class="title-container">
-        <h2 class="game-title-product-page">${producto.titulo}</h2>
+        <h2 class="game-title-product-page">${producto.nombre}</h2>
         <h3 class="game-category-product-page">${producto.categoria}</h3>
       </section>
       <section class="game-info-container">
         <div class="info-game-container game-video-container">
-          <iframe width="100%" height="100%" src="${producto.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="100%" height="100%" src="${producto.link_de_video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div class="info-game-container game-description-container">
           <h3>Descripción</h3>
@@ -45,7 +45,7 @@ function dibujarPagina() {
 <div class="product-requeriments-column purchase-column">
   <div class="sticky-container">
   <h3 class="purchase-title">Comprar ahora</h3>
-  <img  class="product-cover-art" src="${producto.cover}" alt="" >
+  <img  class="product-cover-art" src="${producto.portada}" alt="" >
   <h3 id="precio-juego" class="product-price">$${producto.precio}</h3>
   <div class="button-container">
     <a href="/pages/404/404.html">

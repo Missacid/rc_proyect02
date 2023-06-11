@@ -26,7 +26,7 @@ function validarSesion() {
     );
     nuevoLi.appendChild(nuevoEnlace);
     menuHeader.appendChild(nuevoLi);
-    nuevoEnlace.href = "/index.html";
+    nuevoEnlace.href = "/pages/admin/data_table.html";
   }
 }
 function cerrarSesion() {

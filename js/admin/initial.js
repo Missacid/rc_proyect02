@@ -1,9 +1,10 @@
-var datatable;
-var storedData = localStorage.getItem("datos");
-var lista = [];
+let datatable;
+let storedData = localStorage.getItem("products");
+let products = [];
+let editIndex;
 
 if (storedData) {
-  lista = JSON.parse(storedData);
+  products = JSON.parse(storedData);
 }
 
 $(document).ready(function () {
@@ -54,7 +55,7 @@ $(document).ready(function () {
             '<button class="eliminar btn btn-danger" data-id="' +
             row.codigo +
             '"><i class="fa-solid fa-trash"></i></button>' +
-            '<button class="editar btn btn-success" data-id="' +
+            `<button class="editar btn btn-success" data-id="` +
             row.codigo +
             '"><i class="fa-solid fa-pen-to-square"></i></button>' +
             '<button class="destacado btn btn-warning" data-id="' +
@@ -66,18 +67,17 @@ $(document).ready(function () {
     ],
   });
 
-  datatable.rows.add(lista).draw();
+  datatable.rows.add(products).draw();
 
   // Evento de click para el botón de destacado
   $("#example tbody").on("click", ".destacado", function () {
-    var codigo = $(this).data("id");
-    var element = lista.find(function (item) {
+    let codigo = $(this).data("id");
+    let element = products.find(function (item) {
       return item.codigo === codigo;
     });
 
     if (element) {
       localStorage.setItem("destacado", JSON.stringify(element));
-      console.log(localStorage.getItem("destacado"));
     }
     swal({
       title: "¡Producto destacado!",
@@ -88,46 +88,82 @@ $(document).ready(function () {
 
   // Evento de click para el botón de eliminar
   $("#example tbody").on("click", ".eliminar", function () {
-    var codigo = $(this).data("id");
-    var index = lista.findIndex(function (item) {
+    let codigo = $(this).data("id");
+    let index = products.findIndex(function (item) {
       return item.codigo === codigo;
     });
 
     if (index !== -1) {
-      lista.splice(index, 1);
+      products.splice(index, 1);
       datatable.row($(this).parents("tr")).remove().draw(false);
 
       // Almacenar datos en el localStorage
-      localStorage.setItem("datos", JSON.stringify(lista));
+      localStorage.setItem("products", JSON.stringify(products));
     }
   });
 
   // Evento de click para el botón de editar
   $("#example tbody").on("click", ".editar", function () {
-    swal("Boton Anda");
+    let codigo = $(this).data("id");
+    let producto = products.find((pais, index) => {
+      if (pais.codigo === codigo) {
+        editIndex = index;
+        return true;
+      }
+    });
+    let videoId = producto.link_de_video.split("embed/")[1];
+    document.getElementById("nombre").value = producto.nombre;
+    document.getElementById("categoria").value = producto.categoria;
+    document.getElementById("descripcion").value = producto.descripcion;
+    document.getElementById("link_de_video").value = videoId;
+    document.getElementById("requisitos").value = producto.requisitos;
+    document.getElementById("precio").value = producto.precio;
+    document.getElementById("banner").value = producto.banner;
+    document.getElementById("portada").value = producto.portada;
   });
 });
 
 function imprimirDatos() {
-  let x = {
-    codigo: Date.now(), // Generar un código único para el elemento
-    nombre: document.getElementById("nombre").value,
-    categoria: document.getElementById("categoria").value,
-    descripcion: document.getElementById("descripcion").value,
-    link_de_video:
+  if (editIndex !== undefined) {
+    products[editIndex].nombre = document.getElementById("nombre").value;
+    products[editIndex].categoria = document.getElementById("categoria").value;
+    products[editIndex].descripcion =
+      document.getElementById("descripcion").value;
+    products[editIndex].link_de_video =
       "https://www.youtube.com/embed/" +
-      document.getElementById("link_de_video").value,
-    requisitos: document.getElementById("requisitos").value,
-    precio: document.getElementById("precio").value,
-    banner: document.getElementById("banner").value,
-    portada: document.getElementById("portada").value,
-  };
+      document.getElementById("link_de_video").value;
+    products[editIndex].requisitos =
+      document.getElementById("requisitos").value;
+    products[editIndex].precio = document.getElementById("precio").value;
+    products[editIndex].banner = document.getElementById("banner").value;
+    products[editIndex].portada = document.getElementById("portada").value;
 
-  lista.push(x);
-  console.log(lista);
+    datatable.clear().rows.add(products).draw();
 
-  datatable.row.add(x).draw(false);
+    // Actualizar datos en el localStorage
+    localStorage.setItem("products", JSON.stringify(products));
 
-  // Almacenar datos en el localStorage
-  localStorage.setItem("datos", JSON.stringify(lista));
+    // Reiniciar el índice de edición
+    editIndex = undefined;
+  } else {
+    let x = {
+      codigo: Date.now(), // Generar un código único para el elemento
+      nombre: document.getElementById("nombre").value,
+      categoria: document.getElementById("categoria").value,
+      descripcion: document.getElementById("descripcion").value,
+      link_de_video:
+        "https://www.youtube.com/embed/" +
+        document.getElementById("link_de_video").value,
+      requisitos: document.getElementById("requisitos").value,
+      precio: document.getElementById("precio").value,
+      banner: document.getElementById("banner").value,
+      portada: document.getElementById("portada").value,
+    };
+
+    products.push(x);
+    datatable.row.add(x).draw(false);
+
+    // Almacenar datos en el localStorage
+    localStorage.setItem("products", JSON.stringify(products));
+  }
 }

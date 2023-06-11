@@ -1,6 +1,7 @@
 function validarSesion() {
-  const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioActual"));
-  console.log(usuarioLogueado);
+  const usuarioLogueado =
+    JSON.parse(localStorage.getItem("usuarioActual")) || false;
+
   const divLogin = document.getElementById("login-container");
 
   if (!usuarioLogueado) {
@@ -25,7 +26,7 @@ function validarSesion() {
     );
     nuevoLi.appendChild(nuevoEnlace);
     menuHeader.appendChild(nuevoLi);
-    nuevoEnlace.href = "/index.html";
+    nuevoEnlace.href = "/pages/admin/data_table.html";
   }
 }
 function cerrarSesion() {

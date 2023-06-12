@@ -1,0 +1,179 @@
+:root {
+  --background: #252525;
+  --button: #1e1e1e;
+  --acento: #2de1fc;
+  /* --acento: #b97fc9; */
+
+  --bg-light: #2c2c2c;
+  --texto-claro: #aaaaaa;
+}
+* {
+  cursor: url(/assets/cursor/diamond-sword.cur), auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+::selection {
+  background-color: var(--acento);
+  color: var(--button);
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--button);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--acento);
+  border-radius: 50px;
+}
+
+/* Header */
+.header-universal {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+nav.navbar-universal {
+  background-color: #25252570 !important;
+  color: white;
+  backdrop-filter: blur(15px);
+}
+.header-logo {
+  width: 50px;
+}
+
+a.nav-link {
+  font-family: "Roboto Mono", monospace;
+}
+.boton-hamburguesa-header {
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.item-menu:hover,
+.item-menu:focus,
+.item-menu a:hover,
+.item-menu a:focus {
+  color: var(--acento) !important;
+  position: relative;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+.a-link-login {
+  text-decoration: none;
+}
+.boton-iniciar-sesion-header {
+  background-color: transparent;
+  border: solid 1px white;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.boton-iniciar-sesion-header:hover {
+  background-color: var(--button);
+  border: solid 1px var(--acento);
+  transition: background-color, border, 0.2s;
+}
+.separador-botones-header {
+  color: var(--acento);
+}
+.boton-cerrar-sesión {
+  color: rgb(255, 102, 102);
+}
+.boton-cerrar-sesión:hover {
+  color: rgb(255, 138, 138);
+}
+a.panel-administracion-link {
+  color: var(--acento) !important;
+  font-weight: bold;
+}
+/* Footer */
+footer.footer-universal {
+  background-color: var(--button);
+  min-height: 20rem;
+  display: flex;
+  gap: 1rem;
+}
+.columna-footer {
+  width: 33%;
+  margin: 1rem;
+}
+.logo-footer {
+  width: 70%;
+}
+.columna-1-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.derechos-reservados-texto {
+  color: var(--texto-claro);
+}
+.social-lista {
+  list-style: none;
+}
+.social-links-footer {
+  text-decoration: none;
+}
+.list-item-social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.list-item-social:hover,
+.list-item-social:focus {
+  color: var(--acento);
+}
+@media screen and (max-width: 425px) {
+  .footer-universal {
+    flex-direction: column;
+    gap: 0;
+    overflow-x: hidden;
+  }
+  .columna-footer {
+    width: 100%;
+    max-width: 100%;
+  }
+  .columna-1-footer {
+    order: 3;
+  }
+  .logo-footer {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+}
+/* PopUp Swal */
+
+.swal-modal {
+  background-color: var(--button);
+  color: white;
+}
+.swal-title,
+.swal-text {
+  color: white;
+}
+.swal-button--confirm {
+  background-color: var(--acento);
+  color: var(--button);
+}
+.swal-button--confirm:hover,
+.swal-button--confirm:focus {
+  background-color: var(--acento) !important;
+}
+.swal-icon,
+.swal-icon--success__hide-corners {
+  background-color: var(--button);
+}
+.swal-icon::before,
+.swal-icon::after {
+  background-color: var(--button);
+}

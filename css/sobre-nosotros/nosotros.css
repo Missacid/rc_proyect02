@@ -1,162 +1,161 @@
-body{
-  background:#ec0808;
+body {
+  background: #ec0808;
 }
-.col-lg-4{
+.col-lg-4 {
   margin: 0 auto;
 }
 
-
-.form-control::placeholder{
+.form-control::placeholder {
   color: white;
 }
 
-.formItem{
-  border-bottom: .2rem #d9534f solid !important;
+.formItem {
+  border-bottom: 0.2rem #d9534f solid !important;
 }
 
-.formBody{
+.formBody {
   width: 40rem;
   height: 43rem;
   margin: 2rem auto;
 }
 
-.header{
+.header {
   display: unset;
 }
 
-.sectionNav{
+.sectionNav {
   position: sticky;
   top: 0;
 }
 
-.mainCard{
+.mainCard {
   width: 10rem;
   height: 10rem;
 }
 
-.cardsTitleText{
+.cardsTitleText {
   font-size: 2rem;
 }
 
-.card{
+.card {
   display: block;
   width: 18rem;
   height: 24rem;
   overflow-y: hidden;
 }
 
-.cardImg{
+.cardImg {
   position: relative;
   bottom: 10%;
 }
 
-.cardbodySize{
+.cardbodySize {
   height: 5.5rem;
 }
 
-.cardText{
-  font-size: .75rem ;
+.cardText {
+  font-size: 0.75rem;
 }
 
-.stars{
+.stars {
   z-index: 1;
   bottom: 20%;
 }
 
-.newGameModal{
+.newGameModal {
   margin: 0 auto;
   width: fit-content;
 }
 
 /*FOOTER*/
-.pie-pagina{
+.pie-pagina {
   position: absolute;
   width: 100%;
 }
-.pie-pagina .grupo-1{
+.pie-pagina .grupo-1 {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap:50px;
+  grid-gap: 50px;
   padding: 45px 0px;
 }
-.pie-pagina .grupo-1 .box figure{
+.pie-pagina .grupo-1 .box figure {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.pie-pagina .grupo-1 .box figure img{
+.pie-pagina .grupo-1 .box figure img {
   width: 150px;
 }
-.pie-pagina .grupo-1 .box h2{
+.pie-pagina .grupo-1 .box h2 {
   margin-bottom: 25px;
   font-size: 20px;
 }
-.pie-pagina .grupo-1 .box p{
+.pie-pagina .grupo-1 .box p {
   margin-bottom: 10px;
 }
-.pie-pagina .grupo-2{
+.pie-pagina .grupo-2 {
   padding: 15px 10px;
   text-align: center;
 }
-.pie-pagina .grupo-2 small{
+.pie-pagina .grupo-2 small {
   font-size: 15px;
 }
-@media screen and (max-width:800px){
-  .pie-pagina .grupo-1{
-      width: 90%;
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap:30px;
-      padding: 35px 0px;
+@media screen and (max-width: 800px) {
+  .pie-pagina .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
   }
 }
 
-@media screen and (min-width: 1240px){
-  .cardsTitle{
+@media screen and (min-width: 1240px) {
+  .cardsTitle {
     width: 1216px;
     margin: 0 auto;
   }
 
   .stars,
-  .cardFooter{
+  .cardFooter {
     bottom: 26%;
-    transition-delay: .3s;
-    transition-duration: .3s;
+    transition-delay: 0.3s;
+    transition-duration: 0.3s;
     visibility: hidden;
     opacity: 0;
   }
 
-  .cardbodySize{
+  .cardbodySize {
     height: 4rem;
-    transition-delay: .0s;
-    transition-duration: .3s;
+    transition-delay: 0s;
+    transition-duration: 0.3s;
     transition-timing-function: ease;
   }
 
-  .cardImg{
+  .cardImg {
     bottom: 0;
-    transition-delay: .0s;
-    transition-duration: .3s;
+    transition-delay: 0s;
+    transition-duration: 0.3s;
   }
 
-  .card:hover > .cardImg{
+  .card:hover > .cardImg {
     bottom: 10%;
   }
-  
-  .card:hover > .stars{
+
+  .card:hover > .stars {
     visibility: visible;
     opacity: 1;
   }
 
-  .card:hover > .cardbodySize{
+  .card:hover > .cardbodySize {
     height: 7rem;
   }
 
-  .card:hover > .card-body > .cardFooter{
+  .card:hover > .card-body > .cardFooter {
     visibility: visible;
     opacity: 1;
   }

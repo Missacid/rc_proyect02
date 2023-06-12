@@ -1,7 +1,11 @@
 * {
     box-sizing: border-box;
 }
-
+:root {
+    --background: #252525;
+    --button: #1e1e1e;
+    --acento: #2de1fc;
+}
 body {
     background: #181818;
     color: #fff;

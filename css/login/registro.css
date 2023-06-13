@@ -18,8 +18,8 @@ h1.registration-title:before {
 }
 
 form {
-  background-color: #2c2c2c;
-  color: #ffffff;
+  background-color: var(--color-light);
+  color: var(--color-dark);
   padding: 20px;
   border-radius: 5px;
 }
@@ -27,18 +27,19 @@ form {
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="number"] {
-  background-color: #2c2c2c;
-  color: #ffffff;
+input[type="number"],
+select {
+  background-color: var(--color-light);
+  color: var(--color-dark);
   border: 1px solid var(--acento);
   padding: 10px;
   margin-bottom: 10px;
 }
 
 input[type="submit"] {
-  background-color: #1e1e1e;
-  color: #ffffff;
-  border: 1px solid #1e1e1e;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border: 1px solid var(--color-primary);
   padding: 10px 20px;
   cursor: pointer;
 }
@@ -46,21 +47,27 @@ input[type="submit"] {
 input[type="submit"]:hover,
 input[type="submit"]:focus {
   background-color: var(--acento);
-  color: #ffffff;
+  color: var(--color-light);
   border: 1px solid var(--acento);
 }
 
 #popup .modal-content {
-  background-color: #f2f2f2;
-  border: 2px solid #ccc;
+  background-color: #2c2c2c;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 #popup .modal-title {
-  color: #333;
+  color: var(--acento);
 }
 
 #popup .modal-body {
   font-size: 16px;
+}
+
+#popup .modal-body p {
+  color: #ffffff;
 }
 
 /* Estilos del formulario */
@@ -114,4 +121,13 @@ input[type="submit"]:focus {
 .signup-link a {
   color: var(--color-primary);
   text-decoration: none;
+}
+
+select option {
+  color: #000000;
+}
+
+.formulario input,
+.formulario select {
+  margin-bottom: 10px;
 }

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de solicitudes</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Gestión de solicitudes</h1>
+
+    <!-- Solicitudes pendientes -->
+    <h2>Solicitudes pendientes</h2>
+    <hr>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregarModal">Agregar solicitud</button>
+
+    <!-- Modal de agregar solicitud -->
+    <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="agregarModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="agregarModalLabel">Agregar solicitud</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="clienteInput" class="form-label">Cliente:</label>
+              <input type="text" class="form-control" id="clienteInput">
+            </div>
+            <div class="mb-3">
+              <label for="fechaInput" class="form-label">Fecha:</label>
+              <input type="date" class="form-control" id="fechaInput">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" onclick="agregarSolicitud()">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Cliente</th>
+          <th>Fecha</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody id="solicitudesPendientes">
+        <tr id="solicitud1">
+          <td>1</td>
+          <td>Cliente 1</td>
+          <td>2023-06-01</td>
+          <td>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#verificarModal">Aprobar</button>
+            <button class="btn btn-danger" onclick="eliminarSolicitud('solicitud1')">Eliminar</button>
+          </td>
+        </tr>
+        <tr id="solicitud2">
+          <td>2</td>
+          <td>Cliente 2</td>
+          <td>2023-06-02</td>
+          <td>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#verificarModal">Aprobar</button>
+            <button class="btn btn-danger" onclick="eliminarSolicitud('solicitud2')">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Mensajes de ayuda -->
+    <h2>Mensajes de ayuda</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Mensaje 1</li>
+      <li class="list-group-item">Mensaje 2</li>
+    </ul>
+
+    <!-- Ventas despachadas/aprobadas -->
+    <h2>Ventas despachadas/aprobadas</h2>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Cliente</th>
+        <th>Fecha</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody id="ventasDespachadasAprobadas">
+      <!-- Aquí se mostrarán las ventas despachadas/aprobadas -->
+    </tbody>
+  </table>
+</div>
+
+  <!-- Modal de verificación -->
+  <div class="modal fade" id="verificarModal" tabindex="-1" aria-labelledby="verificarModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="verificarModalLabel">Verificación de venta</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="rolInput" class="form-label">Rol:</label>
+            <input type="text" class="form-control" id="rolInput">
+          </div>
+          <div class="mb-3">
+            <label for="passwordInput" class="form-label">Contraseña:</label>
+            <input type="password" class="form-control" id="passwordInput">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" onclick="verificarVenta()">Aprobar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./gestion_solicitudes.js"></script>
+</body>
+
+</html>

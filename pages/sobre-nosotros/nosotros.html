@@ -4,27 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/images/logo/favicon.png" type="image/x-icon">
     <!-- Hojas de estilo CSS -->
     <link rel="stylesheet" href="/css/universal/recursos.css" />
-    <link rel="stylesheet" href="/css/login/login.css" />
-    
-     <!-- Recursos adicionales -->
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-     <link
-       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-       rel="stylesheet"
-     />
-     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-     <link
-       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-       rel="stylesheet"
-       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-       crossorigin="anonymous"
-     />
-     <!-- Fin de recursos adicionales -->
-    
-    <title>Login</title>
+    <link rel="stylesheet" href="/css/home/home.css" />
+    <link rel="stylesheet" href="/css/sobre-nosotros/nosotros.css">
+    <!-- Recursos adicionales -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- Fin de recursos adicionales -->
+    <title>Sobre nosotros</title>
   </head>
   <body class="body-inicio">
     <!-- Header -->
@@ -69,32 +69,38 @@
       </nav>
     </header>
       <!-- Fin del Header -->
-    <!-- Seccion formulario login -->
-    <main class="main-login">
-      <div class="container col-md-12 col-lg-5">
-        <div class="wrapper">
-          <div class="title"><h2 class="titulo-iniciar-sesion">INICIAR SESIÓN</h2></div>
-          <form action="submit" name="login" 
-          class="form-login"
-          id="login-form">
-            <div class="row">
-              <i class="fas fa-user"></i>
-              <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required>
+    <!-- Seccion sobre nosotros -->
+  <main class="main-sobre-nosotros">
+      <hr class="featurette-divider">
+         <div class="row dos">
+            <div class="col-lg-4">
+              <img src="/assets/images/sobre-nosotros/juli.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+              <h2 class="fw-normal">Julian Llanca</h2>
+              <p>"Párrafo de texto debajo del encabezado para explicar el encabezado. Lo agregaremos con otra oración y probablemente sigamos hasta que nos quedemos sin palabras."</p>
+              <p><a class="btn btn-secondary" href="/pages/404/404.html">Curriculum &raquo;</a></p>
             </div>
-            <div class="row">
-              <i class="fas fa-lock"></i>
-              <input type="password" id="contra" name="contra" placeholder="Contraseña" required>
+            <div class="col-lg-4">
+              <img src="/assets/images/sobre-nosotros/maxi.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+              <h2 class="fw-normal">Máximo Majorel</h2>
+              <p>Me gusta la tecnología desde chico, me encanta experimentar e investigar cosas nuevas cada vez que desarrollo tambien me gusta el diseño y la fotografía. Desde chico desarmaba cosas, más adelante aprendí a arreglar cosas y ahora me queda crear cosas así que por eso estudio programación.</p>
+              <p><a class="btn btn-secondary" href="/pages/404/404.html">Curriculum &raquo;</a></p>
             </div>
-            <div class="pass"><a href="">Olvidé mi contraseña</a></div>
-            <div class="row button">
-              <input type="submit" value="Iniciar Sesion" onclick="">
+            <div class="col-lg-4">
+              <img src="/assets/images/sobre-nosotros/aylen.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+              <h2 class="fw-normal">Aylen Serrano</h2>
+              <p>Tengo 27 años, soy de Tucuman - Argentina. Actualmente estoy estudiando en Rollingcode School para mejorar mis habilidades como programadora. Además, estoy involucrada en un proyecto de robótica educativa, donde fundé un club digital de Arduino para niños. Me motiva la idea de enseñar y compartir conocimientos con los demás, y estoy trabajando duro para alcanzar mi meta de crear mi propia fundación en el futuro. Estoy emocionada por lo que el futuro me depara y siempre estoy buscando oportunidades para aprender y crecer</p>
+              <p><a class="btn btn-secondary" href="/pages/404/404.html">Curriculum &raquo;</a></p>
             </div>
-            <div class="signup-link">¿No eres un miembro?. <a href="./registro.html">Regístrate ahora.</a></div>
-          </form>
-        </div>
-      </div>
-    </main>
-    <!-- Fin del login-->
+            <div class="row dos">
+              <div class="col-lg-4">
+                <img src="/assets/images/sobre-nosotros/santi.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                <h2 class="fw-normal">Santiago Gonzalez</h2>
+                <p>En el gimnasio, programando o esperando que salga silksong. Muchas gracias por pasarte por la pagina igualmente</p>
+                <p><a class="btn btn-secondary" href="/pages/404/404.html">Curriculum &raquo;</a></p>
+            </div>
+
+  </main>
+    <!-- Fin sobre nosotros -->
     <!-- Inicio Footer -->
     <footer class="footer-universal">
       <div class="columna-footer columna-1-footer">
@@ -138,9 +144,6 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Scripts creados para el proyecto  -->
-    <script src="/js/login-page/login.js"></script>
     <script src="/js/universal-scripts/header-login.js"></script>
   </body>
 </html>

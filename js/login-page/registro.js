@@ -1,95 +1,64 @@
-// Usuarios predefinidos del sitio:
-const usuariosRegistrados = [
-  {
-    nombre: "Máximo Majorel",
-    email: "maximomajorel@gastlygames.com",
-    password: "1234",
-    active: true,
-    rol: "USER_ROLE",
-  },
-  {
-    nombre: "María Aylen Serrano",
-    email: "aylenserrano@gastlygames.com",
-    password: "1234",
-    active: true,
-    rol: "USER_ROLE",
-  },
-  {
-    nombre: "Matías Leal",
-    email: "matiasleal@gastlygames.com",
-    password: "1234",
-    active: true,
-    rol: "USER_ROLE",
-  },
-  {
-    nombre: "Santiago Gonzalez Fernandez",
-    email: "santiagogonzalez@gastlygames.com",
-    password: "1234",
-    active: true,
-    rol: "USER_ROLE",
-  },
-  {
-    nombre: "Administrador Gastly Games",
-    email: "admin@gastlygames.com",
-    password: "admin",
-    active: true,
-    rol: "ADMIN_ROLE",
-  },
-];
+document.getElementById("registro-btn").addEventListener("click", function() {
+  // Obtener los valores de los campos de formulario
+  var nombre = document.getElementById("nombre").value;
+  var correo = document.getElementById("correo").value;
+  var contra = document.getElementById("contra").value;
 
-localStorage.setItem("usuariosRegistrados", JSON.stringify(usuariosRegistrados));
-
-const usuariosLocalStorage = JSON.parse(localStorage.getItem("usuariosRegistrados"));
-
-if (!usuariosLocalStorage) {
-  localStorage.setItem("usuariosRegistrados", JSON.stringify(usuariosRegistrados));
-}
-
-// Elementos del DOM:
-const loginForm = document.getElementById("login-form");
-
-// Evento submit del formulario
-loginForm.addEventListener("submit", (evento) => {
-  evento.preventDefault();
-  const emailInput = evento.target.elements.correo.value;
-  const passwordInput = evento.target.elements.contra.value;
-
-  // Verificación de usuarios
-  const usuarioEncontrado = usuariosLocalStorage.find((usuario) => {
-    if (usuario.email === emailInput) {
-      return true;
-    }
-  });
-
-  // Caso de usuario incorrecto o contraseña incorrecta:
-  if (!usuarioEncontrado || usuarioEncontrado.password !== passwordInput) {
-    swal({
-      title: "Error",
-      text: "El usuario o contraseña ingresados son incorrectos",
-      icon: "error",
-      button: "Intentar de nuevo",
-    });
+  // Validar los campos del formulario
+  if (nombre === "" || correo === "" || contra === "") {
+    alert("Por favor, completa todos los campos del formulario.");
     return;
   }
 
-  // Caso de usuario correcto y contraseña correcta:
-  if (usuarioEncontrado && usuarioEncontrado.password === passwordInput) {
-    delete usuarioEncontrado.password;
-    localStorage.setItem("usuarioActual", JSON.stringify(usuarioEncontrado));
-    swal({
-      title: "Iniciaste sesión",
-      text: `Bienvenido ${usuarioEncontrado.nombre}`,
-      icon: "success",
-      button: "Continuar",
-    });
+  // Guardar los datos del usuario en el almacenamiento local
+  var usuario = {
+    nombre: nombre,
+    correo: correo,
+    contra: contra
+  };
+  localStorage.setItem("usuario", JSON.stringify(usuario));
 
-    // Verificar si el usuario tiene rol ADMIN_ROLE
-    if (usuarioEncontrado.rol === "ADMIN_ROLE") {
-      setTimeout(() => {
-        window.location.href = "/index.html";
-      }, 1000);
-    } else {
-      alert("Acceso denegado. No tienes privilegios de administrador.");
-    }
+  // Redireccionar a la página de inicio y pasar el nombre de usuario como parámetro
+  window.location.href = "/index.html?username=" + encodeURIComponent(nombre);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Obtener el parámetro del nombre de usuario de la URL
+  var params = new URLSearchParams(window.location.search);
+  var username = params.get("username");
+
+  // Verificar si se proporcionó un nombre de usuario
+  if (username) {
+    // Actualizar el elemento de marcador de posición en la página de inicio
+    document.getElementById('username-placeholder').textContent = username;
+    document.getElementById('login-section').style.display = 'none';
+    document.getElementById('logged-in-section').style.display = 'block';
   }
 });
+
+function logout() {
+  // Eliminar datos de sesión o realizar otras acciones necesarias al cerrar sesión.
+  document.getElementById('username-placeholder').textContent = '[Nombre de usuario]';
+  document.getElementById('login-section').style.display = 'block';
+  document.getElementById('logged-in-section').style.display = 'none';
+}
+
+// Obtener el parámetro de la URL
+function getURLParameter(name) {
+  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  var results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+// Obtener el nombre de usuario de la URL y mostrarlo en el botón de "Iniciar sesión"
+var username = getURLParameter('username');
+if (username !== '') {
+  document.getElementById('username-placeholder').textContent = username;
+  document.getElementById('login-section').style.display = 'none';
+  document.getElementById('logged-in-section').style.display = 'block';
+} else {
+  document.getElementById('username-placeholder').textContent = '[Nombre de usuario]';
+  document.getElementById('login-section').style.display = 'block';
+  document.getElementById('logged-in-section').style.display = 'none';
+}

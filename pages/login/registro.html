@@ -78,40 +78,44 @@
         <div class="col">
           <form class="formulario d-flex flex-column" id="formulario">
             <input type="text" id="nombre" placeholder="Nombre" required />
-            <hr>
+            <hr />
             <input type="email" id="correo" placeholder="Correo electrónico" required />
-            <hr>
+            <hr />
             <input type="password" id="contra" placeholder="Contraseña" required />
-            <hr>
-            <select id="rol" name="rol" required>
-              <option value="usuario">Usuario</option>
-              <option value="admin">Admin</option>
-            </select>
+            <hr />
+           
           </form>
 
           <div class="row justify-content-center">
             <div class="col">&nbsp;</div>
 
             <div class="row justify-content-center">
-        <div class="col text-center">
-          <input class="btn btn-lg" type="submit" value="Registrarse" />
-           </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col">&nbsp;</div>
-    </div>
-
-    <div id="popup" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="popup-title" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="popup-title">Registro exitoso</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+              <div class="col text-center">
+                <input class="btn btn-lg" id="registro-btn" type="submit" value="Registrarse" />
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col">&nbsp;</div>
+            </div>
           </div>
-          <div class="modal-body">
-            <p>¡Gracias por registrarte!</p>
+        </div>
+      </div>
+
+      <div id="popup" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="popup-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="popup-title">Mensaje</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="popup-message"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+            </div>
           </div>
         </div>
       </div>
@@ -134,5 +138,7 @@
     <script src="/js/universal-scripts/header-login.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="/js/login-page/registro.js"></script>
+  
+    
   </body>
 </html>

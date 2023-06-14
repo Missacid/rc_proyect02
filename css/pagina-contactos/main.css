@@ -122,3 +122,9 @@ ul {
     text-align: left;
   }
 }
+.preguntas-frecuentes-link {
+  text-decoration: none;
+}
+.preguntas-frecuentes-link p {
+  color: var(--acento);
+}

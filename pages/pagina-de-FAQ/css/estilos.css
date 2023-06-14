@@ -17,7 +17,7 @@ main {
 }
 
 .titulo {
-  color: #d10909;
+  color: var(--acento);
   font-weight: 700;
   text-align: center;
   margin: 60px 0;
@@ -44,6 +44,9 @@ main {
   color: rgb(48, 40, 40);
   border: 2px solid transparent;
   transition: 0.3s ease all;
+}
+.categoria p {
+  color: #000;
 }
 
 .categoria:hover {

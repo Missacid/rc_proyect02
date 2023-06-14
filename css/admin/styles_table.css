@@ -9,3 +9,21 @@
 .body-admin {
   background-color: var(--background);
 }
+.titulo-principal {
+  color: var(--texto-claro);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+.contenedor-admin {
+  padding: 1em;
+}
+td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+select option {
+  color: #2c2c2c !important;
+}

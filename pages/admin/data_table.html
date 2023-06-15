@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/images/logo/favicon.png" type="image/x-icon">
     <script src="/js/admin/rolecheck.js"></script>
     <link rel="stylesheet" href="/css/admin/styles_table.css" />
     <link
@@ -44,49 +45,50 @@
     <title>Panel de administracion</title>
   </head>
   <body class="body-admin">
-        <!-- Header -->
-        <header class="header-universal">
-          <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-universal navbar-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="/index.html"><img  class="header-logo" src="/assets/images/logo/isotipo.png" alt="Logo Gastly Games"></a>
-              <button
-                class="navbar-toggler boton-hamburguesa-header"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul id="menu-header" class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item item-menu">
-                    <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
-                  </li>
-                  <li class="nav-item item-menu">
-                    <a class="nav-link active" aria-current="page" href="/pages/shop/shop.html">Tienda</a>
-                  </li>
-                  <li class="nav-item item-menu">
-                    <a class="nav-link active" aria-current="page" href="#">Sobre nosotros</a>
-                  </li>
-                  <li class="nav-item item-menu">
-                    <a class="nav-link active" aria-current="page" href="#">Contacto</a>
-                  </li>
-                    </ul>
-                  </li>
-      
+    <!-- Header -->
+    <header class="header-universal">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-universal navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html"><img  class="header-logo" src="/assets/images/logo/isotipo.png" alt="Logo Gastly Games"></a>
+          <button
+            class="navbar-toggler boton-hamburguesa-header"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="menu-header" class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item item-menu">
+                <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
+              </li>
+              <li class="nav-item item-menu">
+                <a class="nav-link active" aria-current="page" href="/pages/shop/shop.html">Tienda</a>
+              </li>
+              <li class="nav-item item-menu">
+                <a class="nav-link active" aria-current="page" href="/pages/sobre-nosotros/nosotros.html">Sobre nosotros</a>
+              </li>
+              <li class="nav-item item-menu">
+                <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+              </li>
                 </ul>
-                <div id="login-container">
-      
-                </div>
-              </div>
+              </li>
+  
+            </ul>
+            <div id="login-container">
+  
             </div>
-          </nav>
-        </header>
-          <!-- Fin del Header -->
-    <h1>Administrar productos</h1>
+          </div>
+        </div>
+      </nav>
+    </header>
+      <!-- Fin del Header -->
+          <main class="contenedor-admin">
+    <h1 class="titulo-principal">Administrar productos</h1>
     <hr />
 
     <div id="formGames" style="width: 100%">
@@ -102,7 +104,7 @@
         <hr />
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text"> Descripcion</span>
+            <span class="input-group-text"> Descripción</span>
           </div>
           <input
             type="text"
@@ -175,6 +177,37 @@
         </tr>
       </thead>
     </table>
+  </main>
+        <!-- Inicio Footer -->
+        <footer class="footer-universal">
+          <div class="columna-footer columna-1-footer">
+            <div class="contenedor-logo-footer">
+              <a href="/index.html">
+              <img src="/assets/images/logo/logo-footer.png" alt="Logo Gastly Games" class="logo-footer">
+            </a>
+            </div>
+            <div><h6 class="derechos-reservados-texto">Todos los derechos reservados - Gastly Games</h6></div>
+          </div>
+          <div class="columna-footer columna-2"></div>
+          <div class="columna-footer columna-3">
+            <h4>¡Seguinos en nuestras redes sociales!</h4>
+            <ul class="social-lista">
+              <a class="social-links-footer" href="">
+                <li class="list-item-social"><i class="fa-brands fa-facebook"> </i>Facebook</li>
+              </a>
+              <a class="social-links-footer" href="">
+                <li class="list-item-social"> <i class="fa-brands fa-instagram"> </i>Instagram</li>
+              </a>
+              <a class="social-links-footer" href="">
+                <li class="list-item-social"><i class="fa-brands fa-twitter"> </i>Twitter</li>
+              </a>
+              <a class="social-links-footer" href="">
+                <li class="list-item-social"><i class="fa-brands fa-tiktok"> </i>TikTok</li>
+              </a>
+            </ul>
+          </div>
+        </footer>
+        <!-- Fin footer -->
     <script src="/js/universal-scripts/header-login.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

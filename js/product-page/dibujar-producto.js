@@ -60,7 +60,7 @@ function dibujarPagina() {
 </div>
   `;
   const precioJuego = document.getElementById("precio-juego");
-  if (producto.precio === 0) {
+  if (producto.precio === "0") {
     precioJuego.innerHTML = "Juego Gratuito";
   } else {
     precioJuego.innerHTML = `$${producto.precio}`;

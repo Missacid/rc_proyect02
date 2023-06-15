@@ -158,13 +158,17 @@ button::before {
 .bloques-informacion-adicional {
   background-color: var(--bg-light);
   width: 40%;
-  min-height: 25rem;
+  min-height: 30rem;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 .titulo-bloque-info {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.5rem;
   width: 80%;
 }
 .bloque-info-con-imagen {
@@ -216,6 +220,9 @@ button::before {
   }
 
   /* Seccion titulos de juegos  */
+  .bloques-informacion-adicional {
+    justify-content: flex-start;
+  }
   .seccion-juegos {
     width: 95%;
   }
@@ -231,7 +238,9 @@ button::before {
   }
 
   /* Seccion info adicional  */
-
+  .titulo-bloque-info {
+    font-size: 2rem;
+  }
   .informacion-adicional-contenedor {
     gap: 1rem;
   }

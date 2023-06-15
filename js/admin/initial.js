@@ -1,8 +1,9 @@
 let datatable;
 let storedData = localStorage.getItem("products");
-let products = [];
+
 let editIndex;
 const botonSubmit = document.getElementById("boton-submit");
+
 if (storedData) {
   products = JSON.parse(storedData);
 }
